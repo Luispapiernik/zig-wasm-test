@@ -22,11 +22,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
 
       - name: Setup Zig Compiler
-      - uses: mlugg/setup-zig@v1.2.1
+        uses: mlugg/setup-zig@v1.2.1
         with:
           version: 0.13.0
 
